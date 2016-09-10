@@ -1,5 +1,6 @@
 package com.zimadev.brian.lab3v2;
 
+import android.icu.text.DecimalFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,14 +37,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void calc(View view)
     {
-        LoanCalculator lCalc = new LoanCalculator();
+        try {
+            LoanCalculator lCalc = new LoanCalculator();
 
-        lCalc.setLoanAmount(Double.parseDouble(edt_loanAmount.getText().toString()));
-        lCalc.setNumberOfYears(Integer.parseInt(edt_termYears.getText().toString()));
-        lCalc.setYearlyInterestRate(Double.parseDouble(edt_yearlyInterest.getText().toString()));
+            lCalc.setLoanAmount(Double.parseDouble(edt_loanAmount.getText().toString()));
+            lCalc.setNumberOfYears(Integer.parseInt(edt_termYears.getText().toString()));
+            lCalc.setYearlyInterestRate(Double.parseDouble(edt_yearlyInterest.getText().toString()));
 
-        txt_monthlyPayment.setText(Double.toString(lCalc.getMonthlyPayment()));
-        txt_totalInterest.setText(Double.toString(lCalc.getTotalInterest()));
-        txt_totalPayment.setText(Double.toString(lCalc.getTotalCostOfLoan()));
+            txt_monthlyPayment.setText(String.format("$%,.2f", lCalc.getMonthlyPayment()));
+            txt_totalInterest.setText(String.format("$%,.2f", lCalc.getTotalInterest()));
+            txt_totalPayment.setText(String.format("$%,.2f", lCalc.getTotalCostOfLoan()));
+        }catch(Exception e)
+        {
+
+        }
+    }
+
+    public void clear(View view)
+    {
+        txt_monthlyPayment.setText(R.string.result);
+        txt_totalInterest.setText(R.string.result);
+        txt_totalPayment.setText(R.string.result);
+        edt_loanAmount.setText(R.string.initial);
+        edt_termYears.setText(R.string.initial);
+        edt_yearlyInterest.setText(R.string.initial);
     }
 }

@@ -30,7 +30,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="15sp"
@@ -38,11 +38,11 @@
 
         <EditText
             android:id="@+id/loanAmountInput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.98"
-            android:inputType="number"
-            android:text="@string/result"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:text="@string/initial"
             />
     </LinearLayout>
 
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="15sp"
@@ -59,11 +59,11 @@
 
         <EditText
             android:id="@+id/termYearInput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.59"
+            android:layout_weight="1"
             android:inputType="number"
-            android:text="@string/result"
+            android:text="@string/initial"
             />
     </LinearLayout>
 
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="15sp"
@@ -80,11 +80,11 @@
 
         <EditText
             android:id="@+id/yearlyInterestInput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.46"
-            android:inputType="number"
-            android:text="@string/result"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:text="@string/initial"
             />
     </LinearLayout>
 
@@ -94,19 +94,20 @@
 
         <Button
             android:id="@+id/btn_calculate"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="@string/btn_calc"
             android:onClick="calc"
             />
 
         <Button
             android:id="@+id/btn_clr"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/btn_clr"
+            android:onClick="clear"
             />
 
     </LinearLayout>
@@ -131,17 +132,17 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="@string/title_monthlyPayment"
             />
 
         <TextView
             android:id="@+id/monthlyPaymentOutput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.70"
+            android:layout_weight="1"
             android:text="@string/result"/>
 
     </LinearLayout>
@@ -151,17 +152,17 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="@string/title_totalPayment"
             />
 
         <TextView
             android:id="@+id/totalPaymentOutput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.47"
+            android:layout_weight="1"
             android:text="@string/result"/>
 
     </LinearLayout>
@@ -171,17 +172,17 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="@string/title_totalInterest"
             />
 
         <TextView
             android:id="@+id/totalInterstOutput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.40"
+            android:layout_weight="1"
             android:text="@string/result"/>
 
     </LinearLayout>
